@@ -1,0 +1,129 @@
+/* 모바일 문구 */
+.moSub {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .inner,
+  .mainTit {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .listItem {
+    &:nth-child(n + 3) {
+      margin-top: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .inner,
+  .mainTit {
+    max-width: 480px;
+  }
+  #career {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .mainTit {
+    text-align: center;
+    & .name {
+      display: block;
+    }
+  }
+  .listItem {
+    width: 100%;
+    margin: 100px auto 0;
+    &:nth-child(1) {
+      margin-top: 50px;
+    }
+  }
+  .container {
+    padding-top: 70px;
+  }
+  .careerWrap {
+    margin-top: 80px;
+  }
+  .careerWrap .mainTit {
+    font-size: 2.2em;
+  }
+  .careList > li > * {
+    display: block;
+  }
+  .careList > li > .liTit {
+    width: 100%;
+  }
+  .liTit {
+    position: relative;
+    padding-left: 15px;
+  }
+  .liTit:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -7px;
+    width: 4px;
+    height: 14px;
+    background-color: #487fb7;
+    opacity: 0.5;
+  }
+  .liTxt {
+    font-size: 17px;
+  }
+  .liTxt {
+    padding-left: 15px;
+  }
+  .liTxt span:first-of-type:before {
+    display: none;
+  }
+  .liTxt span:before {
+    content: '/';
+    margin: -11px 12px 0 6px;
+    background-color: transparent;
+    color: #ddd;
+  }
+  .liTxt .kind,
+  .liTxt .rate {
+    font-size: 15px;
+  }
+  /* footer */
+  footer {
+    margin-top: 100px;
+  }
+  /* top 버튼 */
+  .top {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0;
+  }
+  /* 모바일 문구 */
+  .moSub {
+    display: block;
+    padding: 25px 10px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+//min
+@media screen and (max-width: 480px) {
+  .inner {
+    padding: 0 30px;
+  }
+  .inner,
+  .mainTit {
+    width: 100%;
+    min-width: 320px;
+  }
+  .container,
+  footer {
+    min-width: 320px;
+  }
+  .liTxt span:first-of-type {
+    display: block;
+  }
+}

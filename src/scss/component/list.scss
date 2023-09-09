@@ -1,0 +1,201 @@
+::selection {
+  background-color: rgba(24, 190, 176, 0.7);
+}
+
+/* 본문 */
+.container {
+  padding-top: 10rem;
+}
+.mainTit {
+  position: relative;
+  z-index: 1;
+  max-width: 135rem;
+  padding: 0 2rem;
+  margin: 5rem auto 0;
+  font-size: 3em;
+  font-weight: 700;
+  color: rgba(0, 12, 150, 0.8);
+  &.name {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+}
+.inner {
+  display: block;
+  max-width: 139rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.listWrap {
+  position: relative;
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
+  margin: -5rem;
+}
+.listItem {
+  position: relative;
+  width: 35rem;
+  margin: 5rem;
+  padding-right: 1rem;
+  padding-bottom: 1.8rem;
+}
+.itemTit {
+  position: relative;
+  z-index: 10;
+  & .title {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 149, 255, 0.49);
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  & .info {
+  }
+  & .subTitle {
+    overflow: hidden;
+    display: block;
+    width: 80%;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: $white;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &[href*='javascript'] {
+      cursor: context-menu;
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin: -0.3rem 0.5rem 0 0;
+      background: url('../images/icon_link_no.png') no-repeat center;
+      background-size: 100% auto;
+      vertical-align: middle;
+    }
+    &:not([href*='javascript:void(0);']):before {
+      background-image: url('../images/icon_link.png');
+    }
+  }
+  & .icoSkill {
+    display: block;
+    margin-top: 0.8rem;
+    & span {
+      display: inline-block;
+      padding: 0 0.5rem 0.2rem;
+      border-radius: 3px;
+      font-size: 0.8em;
+      color: #ffffff;
+    }
+    & .icoHtml {
+      background-color: #37cd90;
+    }
+    & .icoCSS3 {
+      background-color: #e84b80;
+    }
+    & .icoSass {
+      background-color: #f98500;
+    }
+    & .icoJS {
+      background-color: #fbeb34;
+    }
+    & .icoEtc {
+      background-color: #c47ee4;
+    }
+  }
+}
+.itemInfo {
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: calc(100% - 1.5rem);
+  height: calc(100% - 1.5rem);
+  background-color: $list-dim;
+  color: $white;
+  border-radius: 1rem;
+  & .btmArea {
+    height: 0;
+    opacity: 0;
+    margin-top: 2.5rem;
+    padding: 0 0.6rem;
+    font-weight: 400;
+    & .myWork span,
+    & .program span {
+      &:after {
+        content: ', ';
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
+    & .program {
+      & span {
+        font-size: 01em;
+      }
+    }
+  }
+}
+.careerWrap {
+  margin-top: 12rem;
+}
+.careList {
+  margin-top: 3rem;
+}
+.careList + .careList {
+  padding-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+.careList > li {
+  display: table;
+  width: 100%;
+  font-size: 0;
+  word-break: keep-all;
+}
+.careList > li + li {
+  margin-top: 2rem;
+}
+.careList > li > * {
+  display: table-cell;
+  vertical-align: top;
+  color: #333;
+}
+.careList > li > .liTit {
+  width: 11.5rem;
+}
+.liTit {
+  font-size: 18px;
+  font-weight: 500;
+}
+.liTxt {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.liTxt .rate {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.liTxt .kind {
+  font-size: 16px;
+}
+.liTxt span:before {
+  content: '';
+  display: inline-block;
+  margin: -0.4rem 3rem 0 3.2rem;
+  width: 1px;
+  height: 1.5rem;
+  background-color: #ddd;
+  vertical-align: middle;
+}
