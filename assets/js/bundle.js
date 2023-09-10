@@ -1,38 +1,44 @@
 /*
-* Version   : ver 0.0.3
-* File      : js/index.js
-* Author    : KIM SO YOUNG
-* 
-* SUMMARY:
-* 1) LIST EVENT - listInit, listEvent
-*/
-function hasJqueryObject($elem) { return $elem.length > 0 }
-var app = app || {};
+ * Version   : ver 0.1.0
+ * File      : js/index.js
+ * Author    : KIM SO YOUNG
+ *
+ * SUMMARY:
+ * 1) LIST EVENT - listInit, listEvent
+ */
 
-app = {
-  listInit: function(){
-    this.item = '.listItem';
-    this.itemTit = '.itemTit';
-    this.$item = app.$body.find(this.item);
+const appBody = document.body;
+const listItem = '.listItem';
+const listTit = '.itemTit';
+const listInfo = '.itemInfo';
+const ACTIVE_CLASS = 'on';
+
+let app = {
+  listInit: function () {
+    this.thisitem = appBody.querySelectorAll(listItem);
     app.listEvent();
   },
-  listEvent: function(){
-      $(this.$item).on('mouseenter', function(){
-        var $itemTit = Number($(this).siblings(this.itemTit).height()) + 'px';
-        $(this).addClass('on');
-        TweenMax.to($(this).find('.btmArea'), .5, {height:'auto', opacity:1});
-        TweenMax.to($(this).find('.itemInfo'), .5, {top:'-15px', left:'-15px', paddingTop: $itemTit});
-        TweenMax.to($('.cursor'), 0.5, {scale:0.8, ease:Power3.easeOut});
-      }).on('mouseleave', function(){
-        $(this).removeClass('on');
-        TweenMax.set($(this).find('.btmArea'), {height:0, opacity:0});
-        TweenMax.set($(this).find('.itemInfo'), {top:'15px', left:'15px', padding:'75% 10px 10px'});
-        TweenMax.to($('.cursor'), 0.5, {scale:0.25, ease:Power3.easeOut});
-      });
-  }
+  listEvent: function () {
+    const items = this.thisitem;
+    for (const item of items) {
+      item.addEventListener('mouseenter', app.enterFunc);
+      item.addEventListener('mouseleave', app.leaveFunc);
+    }
+  },
+  enterFunc: function () {
+    this.classList.add(ACTIVE_CLASS);
+    const itemHeight = this.querySelector(listTit).clientHeight;
+    this.querySelector(listInfo).style.height = itemHeight + 100 + 'px';
+  },
+  leaveFunc: function () {
+    this.classList.remove(ACTIVE_CLASS);
+    this.querySelector(listInfo).style.height = '';
+  },
+};
+
+function hasJqueryObject(elem) {
+  return elem.attributes.length > 0;
 }
-  
-$(function(){
-  app.$body = $("body");
-  hasJqueryObject(app.$body.find(".listItem")) && app.listInit(".listItem");
-})
+
+// 조건이 맞으면 Go!
+hasJqueryObject(appBody.querySelector(listItem)) && app.listInit(listItem);
