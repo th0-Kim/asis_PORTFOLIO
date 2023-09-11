@@ -8,14 +8,14 @@
  */
 
 const appBody = document.body;
-const listItem = '.listItem';
-const listTit = '.itemTit';
-const listInfo = '.itemInfo';
+const list_item = '.list_item';
+const listTit = '.item_title';
+const listInfo = '.item_back';
 const ACTIVE_CLASS = 'on';
 
 let app = {
   listInit: function () {
-    this.thisitem = appBody.querySelectorAll(listItem);
+    this.thisitem = appBody.querySelectorAll(list_item);
     app.listEvent();
   },
   listEvent: function () {
@@ -28,7 +28,7 @@ let app = {
   enterFunc: function () {
     this.classList.add(ACTIVE_CLASS);
     const itemHeight = this.querySelector(listTit).clientHeight;
-    this.querySelector(listInfo).style.height = itemHeight + 100 + 'px';
+    this.querySelector(listInfo).style.height = itemHeight + 80 + 'px';
   },
   leaveFunc: function () {
     this.classList.remove(ACTIVE_CLASS);
@@ -41,4 +41,4 @@ function hasJqueryObject(elem) {
 }
 
 // 조건이 맞으면 Go!
-hasJqueryObject(appBody.querySelector(listItem)) && app.listInit(listItem);
+hasJqueryObject(appBody.querySelector(list_item)) && app.listInit(list_item);

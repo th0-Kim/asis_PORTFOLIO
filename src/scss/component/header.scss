@@ -1,0 +1,19 @@
+header {
+  max-width: 135rem;
+  padding: 0 2rem;
+  margin: 5rem auto;
+}
+.my_ability_area {
+  @include font(1.6rem, 500, $color_333333, 1.6);
+  strong {
+    font-weight: 700;
+  }
+  .ability_row {
+    margin-top: 1rem;
+  }
+  p {
+    strong {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,132 +1,124 @@
 /* 모바일 문구 */
-.moSub {
+.mo_none {
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1290px) {
   .inner,
-  .mainTit {
-    max-width: 860px;
-    margin: 0 auto;
-  }
-  .listItem {
-    &:nth-child(n + 3) {
-      margin-top: 100px;
-    }
+  .main_title {
+    max-width: 86rem;
   }
 }
 
 @media screen and (max-width: 840px) {
-  .inner,
-  .mainTit {
-    max-width: 480px;
-  }
   #career {
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 2rem;
   }
-  .mainTit {
+  .main_title {
     text-align: center;
-    & .name {
+    .name {
       display: block;
     }
   }
-  .listWrap {
+  .list_wrap {
     margin: 0;
   }
-  .listItem {
-    width: 100%;
-    margin: 100px auto 0;
-    &:nth-child(1) {
-      margin-top: 50px;
-    }
+  .list_item {
+    width: 80%;
+    margin: 10rem auto 0;
   }
   .container {
-    padding-top: 70px;
+    padding-top: 7rem;
   }
-  .careerWrap {
-    margin-top: 80px;
+  .career_wrap {
+    margin-top: 8rem;
+    .main_title {
+      font-size: 2.2em;
+    }
   }
-  .careerWrap .mainTit {
-    font-size: 2.2em;
+  .career_list {
+    > li {
+      grid-auto-rows: auto;
+    }
   }
-  .careList > li > * {
-    display: block;
-  }
-  .careList > li > .liTit {
-    width: 100%;
-  }
-  .liTit {
+  .li_title {
     position: relative;
-    padding-left: 15px;
+    flex-shrink: 0;
+    width: 11rem;
+    padding-left: 1.5rem;
+    &:before {
+      content: '';
+      position: absolute;
+      opacity: 0.5;
+      top: 0.7rem;
+      left: 0;
+      z-index: 1;
+      width: 0.4rem;
+      height: 1.4rem;
+      background-color: $color_487fb7;
+    }
   }
-  .liTit:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -7px;
-    width: 4px;
-    height: 14px;
-    background-color: #487fb7;
-    opacity: 0.5;
-  }
-  .liTxt {
-    font-size: 17px;
-  }
-  .liTxt {
-    padding-left: 15px;
-  }
-  .liTxt span:first-of-type:before {
-    display: none;
-  }
-  .liTxt span:before {
-    content: '/';
-    margin: -11px 12px 0 6px;
-    background-color: transparent;
-    color: #ddd;
-  }
-  .liTxt .kind,
-  .liTxt .rate {
-    font-size: 15px;
+  .li_text {
+    padding-left: 1.5rem;
+    span {
+      &:before {
+        content: '/';
+        margin: -1.1rem 1.2rem 0 0.6rem;
+        background-color: transparent;
+        color: $color_dddddd;
+      }
+      &:first-of-type {
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .kind,
+    .rate {
+      font-size: 1.5rem;
+    }
   }
   /* footer */
   footer {
-    margin-top: 100px;
+    margin-top: 10rem;
   }
   /* top 버튼 */
   .top {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 40px;
-    line-height: 40px;
+    height: 4rem;
+    line-height: 4rem;
     border-radius: 0;
   }
   /* 모바일 문구 */
-  .moSub {
+  .mo_none {
     display: block;
-    padding: 25px 10px 0;
+    padding: 2.5rem 1rem 0;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 
-//min
 @media screen and (max-width: 480px) {
   .inner {
-    padding: 0 30px;
+    padding: 0 3rem;
   }
   .inner,
-  .mainTit {
+  .main_title {
     width: 100%;
-    min-width: 320px;
+    min-width: 32rem;
   }
   .container,
   footer {
-    min-width: 320px;
+    min-width: 32rem;
   }
-  .liTxt span:first-of-type {
-    display: block;
+  .li_text {
+    span {
+      &:first-of-type {
+        display: block;
+      }
+    }
   }
 }

@@ -3,34 +3,38 @@ footer {
   margin-top: 20rem;
   padding: 5rem 0;
   background-color: rgba(0, 31, 58, 0.8);
-  color: #fff;
+  @include font(1.6rem, 300, $white, 1.6);
   text-align: center;
-  font-size: 1.3em;
-  & a {
-    color: #fff;
-  }
-  & p {
-    & strong {
-      display: inline-block;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
+  strong {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 500;
   }
 }
 /* top 버튼 */
 .top {
   position: fixed;
+  @include flex(row, center, center);
   z-index: 10;
   bottom: 5rem;
   right: 5rem;
   width: 5rem;
   height: 5rem;
-  line-height: 5rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  color: #fff;
+  @include font(1.6rem, 700, $white, 1.4);
   text-align: center;
   &:hover {
-    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.8);
   }
+}
+.blind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
 }
