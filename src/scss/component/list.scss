@@ -61,7 +61,7 @@
 .item_title {
   position: relative;
   z-index: 10;
-  .title {
+  .thumb_box {
     overflow: hidden;
     display: block;
     width: 100%;
@@ -81,6 +81,7 @@
     display: block;
     width: 100%;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
     padding-left: 2.4rem;
     text-indent: -2.4rem;
     @include font(1.6rem, 500, $white, 1.4);
@@ -102,11 +103,13 @@
     }
   }
   .skill_label {
-    display: block;
-    margin-top: 0.8rem;
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+    margin: -0.2rem;
     span {
-      display: inline-block;
+      display: block;
       padding: 0 0.5rem 0.2rem;
+      margin: 0.2rem;
       border-radius: 3px;
       @include font(1.4rem, 500, $white, 1.4);
     }
