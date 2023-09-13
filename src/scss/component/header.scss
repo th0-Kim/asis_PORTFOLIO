@@ -4,7 +4,7 @@ header {
   margin: 5rem auto;
 }
 .my_ability_area {
-  @include font(1.6rem, 500, $color_333333, 1.6);
+  @include font(1.6rem, 500, var(--color-333333), 1.6);
   strong {
     font-weight: 700;
   }
