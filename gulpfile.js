@@ -14,6 +14,7 @@ const fileinclude = require('gulp-file-include');
 const prettyHtml = require('gulp-pretty-html');
 const replace = require('gulp-replace');
 const removeEmptyLines = require('gulp-remove-empty-lines');
+const beautify = require('gulp-beautify');
 
 // Clean assets
 function clear() {
@@ -81,6 +82,7 @@ function html(done) {
         unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br'],
       }),
     )
+    .pipe(beautify.html({ indent_size: 2 }))
     .pipe(
       removeEmptyLines({
         removeComments: false,
