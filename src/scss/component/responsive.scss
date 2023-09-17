@@ -43,11 +43,6 @@
       font-size: 2.2em;
     }
   }
-  .career_list {
-    > li {
-      grid-auto-rows: auto;
-    }
-  }
   .li_title {
     position: relative;
     flex-shrink: 0;
@@ -117,10 +112,19 @@
   footer {
     min-width: 32rem;
   }
+  .career_list {
+    > li {
+      display: block;
+    }
+  }
   .li_text {
     span {
+      margin-right: 1rem;
       &:first-of-type {
         display: block;
+      }
+      &::before {
+        display: none;
       }
     }
   }
