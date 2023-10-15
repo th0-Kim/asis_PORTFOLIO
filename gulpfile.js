@@ -23,6 +23,7 @@ function clear() {
   for (var i = 0; i < path.length; i++) {
     return src(path[i].destination, {
       read: false,
+      allowEmpty: true,
     }).pipe(clean({ force: true }));
   }
 }
@@ -37,7 +38,7 @@ function lib_css() {
   done();
 }
 function lib_js(done) {
-  return src(['./src/js/lib/*.*']).pipe(dest('./assets/js/lib'));
+  return src(['./src/js/data/*.*']).pipe(dest('./assets/js/data'));
 
   done();
 }
@@ -67,11 +68,11 @@ function images() {
   return src('./src/images/**/*.*').pipe(dest('./assets/images'));
 }
 function html(done) {
-  return src(['./src/html/**/*.*', '!./src/html/component/**', '!./src/html/common/**'])
+  return src(['./src/html/**/*.*'])
     .pipe(
       fileinclude({
         prefix: '@@',
-        basepath: './src/html/common',
+        basepath: './src/',
       }),
     )
     .pipe(replace('<!-- prettier-ignore -->', ''))
@@ -82,12 +83,7 @@ function html(done) {
         unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br'],
       }),
     )
-    .pipe(beautify.html({ indent_size: 2 }))
-    .pipe(
-      removeEmptyLines({
-        removeComments: false,
-      }),
-    )
+    .pipe(removeEmptyLines())
     .pipe(dest('./'));
   done();
 }
@@ -98,6 +94,7 @@ function watchFiles() {
   watch('./src/images/**/*.*', images);
   watch('./src/scss/**', css);
   watch('./src/js/*', js);
+  watch('./src/js/data/*', lib_js);
 }
 
 // BrowserSync

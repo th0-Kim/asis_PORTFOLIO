@@ -18,6 +18,13 @@
     font-weight: 700;
   }
 }
+.career_year {
+  margin-bottom: 1rem;
+  @include font(2rem, 500, var(--main_header), 1.4);
+}
+.career_list_row {
+  margin-bottom: 3rem;
+}
 .inner {
   display: block;
   max-width: 139rem;

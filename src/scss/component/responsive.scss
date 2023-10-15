@@ -16,7 +16,6 @@
   }
   #career {
     max-width: 100%;
-    padding: 0 2rem;
   }
   .main_title {
     text-align: center;
@@ -52,7 +51,7 @@
       content: '';
       position: absolute;
       opacity: 0.5;
-      top: 0.7rem;
+      top: 0.2rem;
       left: 0;
       z-index: 1;
       width: 0.4rem;
@@ -117,7 +116,13 @@
       display: block;
     }
   }
+  .li_title {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
   .li_text {
+    display: block;
     span {
       margin-right: 1rem;
       &:first-of-type {
