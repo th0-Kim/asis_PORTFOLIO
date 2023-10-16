@@ -1,19 +1,23 @@
-header {
+.header {
   max-width: 135rem;
   padding: 0 2rem;
-  margin: 5rem auto;
+  margin: 7rem auto 9rem;
 }
 .my_ability_area {
-  @include font(1.6rem, 500, var(--color-333333), 1.6);
-  strong {
-    font-weight: 700;
-  }
   .ability_row {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 0;
+    }
   }
-  p {
+  .ability_title {
+    @include font(1.6rem, 700, var(--color_555555), 1.6);
+  }
+  .ability_items {
+    @include font(1.6rem, 500, var(--color_333333), 1.6);
+    word-break: keep-all;
     strong {
-      font-weight: 500;
+      font-weight: 700;
     }
   }
 }

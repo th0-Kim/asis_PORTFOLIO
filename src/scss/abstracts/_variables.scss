@@ -1,13 +1,14 @@
 // responsive
-$pc_1700: 'screen and (max-width: 1700px)';
-$tablet_768: 'screen and (max-width: 768px)';
-$mobile_360: 'screen and (max-width: 360px)';
+$pc: 'screen and (max-width: 1280px)';
+$tablet: 'screen and (max-width: 1080px)';
+$mobile: 'screen and (max-width: 480px)';
 
 // color palette
 :root {
-  --color-white: #fff;
-  --color-black: #000;
+  --color_white: #fff;
+  --color_black: #000;
   --color_333333: #333;
+  --color_555555: #555555;
   --color_37cd90: #37cd90;
   --color_e84b80: #e84b80;
   --color_f98500: #f98500;
@@ -18,4 +19,9 @@ $mobile_360: 'screen and (max-width: 360px)';
   --color_list_dim: rgba(6, 84, 152, 0.72);
   --object_selected: rgba(24, 190, 176, 0.7);
   --main_header: rgba(0, 12, 150, 0.8);
+  --main_top_title: rgba(0, 12, 150, 0.5);
+}
+
+::selection {
+  background-color: var(--object_selected);
 }

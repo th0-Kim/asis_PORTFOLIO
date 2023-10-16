@@ -3,86 +3,52 @@
   display: none;
 }
 
-@media screen and (max-width: 1290px) {
-  header,
+@media #{$pc} {
+  .header,
   .container {
     max-width: 86rem;
   }
 }
 
-@media screen and (max-width: 840px) {
-  .my_ability_area {
-    text-align: center;
+@media #{$tablet} {
+  /* header */
+  .header {
+    margin-top: 3rem;
   }
-  #career {
-    max-width: 100%;
+
+  .my_title {
+    font-size: 2rem;
+  }
+  .my_name {
+    display: block;
+    font-size: 3rem;
   }
   .main_title {
+    margin-bottom: 4rem;
     text-align: center;
-    .name {
-      display: block;
+  }
+
+  .my_intro_area {
+    margin-bottom: 7rem;
+  }
+  .my_ability_area {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    .ability_title {
+      font-size: 1.3rem;
+    }
+    .ability_items {
+      font-size: 1.4rem;
     }
   }
-  .list_wrap {
-    margin: 0;
-  }
-  .list_item {
-    width: calc(100% - 4rem);
-    margin: 7rem auto 0;
-    &:first-child {
-      margin-top: 3rem;
-    }
-  }
-  .container {
-    padding-top: 0;
-  }
-  .career_wrap {
-    margin-top: 8rem;
-    .main_title {
-      font-size: 2.2em;
-    }
-  }
-  .li_title {
-    position: relative;
-    flex-shrink: 0;
-    width: 11rem;
-    padding-left: 1.5rem;
-    &:before {
-      content: '';
-      position: absolute;
-      opacity: 0.5;
-      top: 0.2rem;
-      left: 0;
-      z-index: 1;
-      width: 0.4rem;
-      height: 1.4rem;
-      background-color: var(--color_487fb7);
-    }
-  }
-  .li_text {
-    padding-left: 1.5rem;
-    span {
-      &:before {
-        content: '/';
-        margin: -1.1rem 1.2rem 0 0.6rem;
-        background-color: transparent;
-        color: var(--color_dddddd);
-      }
-      &:first-of-type {
-        &:before {
-          display: none;
-        }
-      }
-    }
-    .kind,
-    .rate {
-      font-size: 1.5rem;
-    }
-  }
+
   /* footer */
-  footer {
+  .footer {
     margin-top: 10rem;
+    padding-bottom: 8rem;
   }
+
   /* top 버튼 */
   .top {
     right: 0;
@@ -92,44 +58,118 @@
     line-height: 4rem;
     border-radius: 0;
   }
+
   /* 모바일 문구 */
   .mo_none {
     display: block;
+    margin-bottom: 2rem;
     text-align: center;
-    font-size: 1.6rem;
-    color: rgba(var(--color-black), 0.7);
+    font-size: 1.3rem;
+    color: var(--color_555555);
+  }
+
+  /* layout */
+  .container {
+    padding-top: 0;
+  }
+
+  /* 포트폴리오 */
+  .portfolio_wrap {
+    .portfolio {
+      margin: 0;
+    }
+    .list_item {
+      width: calc(100% - 4rem);
+      margin: 7rem auto 0;
+      &:first-child {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  /* 경력 */
+  #career {
+    max-width: 100%;
+  }
+  .career_wrap {
+    margin-top: 8rem;
+    .main_title {
+      font-size: 2.2em;
+    }
+  }
+  .career_list {
+    .li_title {
+      position: relative;
+      flex-shrink: 0;
+      width: 11rem;
+      padding-left: 1.5rem;
+      &:before {
+        content: '';
+        position: absolute;
+        opacity: 0.5;
+        top: 0.2rem;
+        left: 0;
+        z-index: 1;
+        width: 0.4rem;
+        height: 1.4rem;
+        background-color: var(--color_487fb7);
+      }
+    }
+    .li_text {
+      padding-left: 1.5rem;
+      span {
+        &:before {
+          content: '/';
+          margin: -1.1rem 1.2rem 0 0.6rem;
+          background-color: transparent;
+          color: var(--color_dddddd);
+        }
+        &:first-of-type {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+    .kind,
+    .rate {
+      font-size: 1.5rem;
+    }
   }
 }
 
-@media screen and (max-width: 480px) {
+@media #{$mobile} {
   .inner,
   .main_title {
     width: 100%;
     min-width: 32rem;
   }
   .container,
-  footer {
+  .footer {
     min-width: 32rem;
   }
+  .my_ability_area {
+    max-width: 35rem;
+  }
   .career_list {
-    > li {
+    & > li {
       display: block;
     }
-  }
-  .li_title {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-  .li_text {
-    display: block;
-    span {
-      margin-right: 1rem;
-      &:first-of-type {
-        display: block;
-      }
-      &::before {
-        display: none;
+    .li_title {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    .li_text {
+      display: block;
+      span {
+        margin-right: 1rem;
+        &:first-of-type {
+          display: block;
+        }
+        &::before {
+          display: none;
+        }
       }
     }
   }

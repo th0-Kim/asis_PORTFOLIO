@@ -1,0 +1,29 @@
+/* 본문 */
+.container {
+  max-width: 135rem;
+  padding: 2rem 2rem 0;
+  margin: 0 auto;
+}
+
+.inner {
+  display: block;
+  max-width: 139rem;
+  margin: 0 auto;
+}
+
+.my_title {
+  @include font(2.6rem, 500, var(--main_top_title), 1.4);
+}
+.my_name {
+  @include font(3.8rem, 700, var(--main_header), 1.4);
+}
+.main_title {
+  @include font(2.6rem, 700, var(--main_header), 1.4);
+}
+
+.main_title,
+.my_intro_area {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 3rem;
+}
