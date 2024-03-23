@@ -1,3 +1,35 @@
+function setCardUl(data) {
+  const careersArticle = document.querySelector('#list');
+  const lists = data.lists;
+
+  // console.dir(lists[0].year);
+
+  lists.forEach((project, i) => {
+    const itemContainer = document.createElement('div');
+    itemContainer.className = 'list_item';
+
+    const periodProject = project.list;
+    periodProject.forEach((list, i) => {
+      const itemFront = document.createElement('div');
+      const itemBack = document.createElement('div');
+      const topArea = document.createElement('div');
+      const middleArea = document.createElement('div');
+      const bottomArea = document.createElement('div');
+      const thumbImage = document.createElement('img');
+      const itemTitle = document.createElement('a');
+      const itemLabels = document.createElement('div');
+      const itemLabelSpan = document.createElement('span');
+      const itemWork = document.createElement('div');
+      const itemProgram = document.createElement('div');
+      const itemWorkSpan = document.createElement('span');
+      const itemProgramSpan = document.createElement('span');
+
+      itemFront.className = 'item_front';
+      itemBack.className = 'item_back';
+    });
+  });
+}
+
 /*
  * Version   : ver 0.1.2
  * File      : js/index.js
@@ -61,12 +93,12 @@ let app = {
   },
 };
 
-function hasJqueryObject(elem) {
+function hasJsObject(elem) {
   return elem.attributes.length > 0;
 }
 
 // 조건이 맞으면 Go!
-hasJqueryObject(_appBody.querySelector(_listItem)) && app.listInit(_listItem);
+hasJsObject(_appBody.querySelector(_listItem)) && app.listInit(_listItem);
 
 // go to top!
 const topButton = document.querySelector('.top');

@@ -10,7 +10,9 @@
   max-width: 139rem;
   margin: 0 auto;
 }
-
+.my_intro_area {
+  @include font(1.8rem, 500, var(--main_top_title), 1.4);
+}
 .my_title {
   @include font(2.6rem, 500, var(--main_top_title), 1.4);
 }

@@ -128,6 +128,13 @@ footer strong {
   margin: 0 auto;
 }
 
+.my_intro_area {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--main_top_title);
+  line-height: 1.4;
+}
+
 .my_title {
   font-size: 2.6rem;
   font-weight: 500;
@@ -255,7 +262,7 @@ footer strong {
 .portfolio_wrap .sub_title:not([href*="javascript:void(0);"]):before {
   background-image: url("../images/icon_link.png");
 }
-.portfolio_wrap .thumb_box {
+.portfolio_wrap .top_area {
   overflow: hidden;
   display: block;
   width: 100%;
@@ -265,7 +272,7 @@ footer strong {
   border: 1px solid rgba(0, 149, 255, 0.49);
   text-align: center;
 }
-.portfolio_wrap .thumb_box img {
+.portfolio_wrap .top_area img {
   display: block;
   width: 100%;
   height: auto;
@@ -436,6 +443,7 @@ footer strong {
   }
   .my_intro_area {
     margin-bottom: 7rem;
+    font-size: 1.6rem;
   }
   .my_ability_area {
     margin: 0 auto;

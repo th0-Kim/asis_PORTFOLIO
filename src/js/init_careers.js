@@ -1,13 +1,16 @@
-import careers from './data/careers.js';
-const allData = [careers];
+import myData from './data/myData.js';
+const allData = [myData];
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', init);
+
+function init() {
   allData.forEach((data, i) => {
-    setUl(data);
+    setCareersUl(data);
+    // setCardUl(data);
   });
-});
+}
 
-function setUl(data) {
+function setCareersUl(data) {
   const careersArticle = document.querySelector('#career');
   const lists = data.lists;
 

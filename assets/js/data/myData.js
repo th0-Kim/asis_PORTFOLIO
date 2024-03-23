@@ -28,7 +28,7 @@ let lists = [
       },
       {
         period: '2023.04.25 ~ 2023.08.11',
-        project: '42dot 웹 반응형 구축 프로젝트',
+        project: '42dot 리뉴얼 프로젝트',
         kind: '반응형 웹',
         rate: '60',
       },
