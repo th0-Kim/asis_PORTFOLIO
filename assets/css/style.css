@@ -4,6 +4,7 @@
   --color_black: #000;
   --color_333333: #333;
   --color_555555: #555555;
+  --color_2c42bd: #2c42bd;
   --color_37cd90: #37cd90;
   --color_e84b80: #e84b80;
   --color_f98500: #f98500;
@@ -304,6 +305,9 @@ footer strong {
   font-weight: 500;
   color: var(--color_white);
   line-height: 1.4;
+}
+.portfolio_wrap .skill_label .label_blue {
+  background-color: var(--color_2c42bd);
 }
 .portfolio_wrap .skill_label .label_green {
   background-color: var(--color_37cd90);

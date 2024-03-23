@@ -108,6 +108,9 @@
       border-radius: 3px;
       @include font(1.4rem, 500, var(--color_white), 1.4);
     }
+    .label_blue {
+      background-color: var(--color_2c42bd);
+    }
     .label_green {
       background-color: var(--color_37cd90);
     }
