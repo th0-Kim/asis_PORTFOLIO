@@ -3,15 +3,9 @@ let lists = [
     year: '2024',
     list: [
       {
-        period: '2023.12.11 ~ 2024.6.11',
+        period: '2024.04.01 ~ 2024.06.30',
         project: '진행중 프로젝트',
-        kind: '웹 앱',
-        rate: '100',
-      },
-      {
-        period: '2023.03.02 ~ 2024.2.29',
-        project: 'KT MVNO 고객 대통합 채널 운영',
-        kind: '반응형 웹, 웹 앱, 웹접근성, SEO',
+        kind: 'PC 웹',
         rate: '100',
       },
     ],
@@ -21,7 +15,13 @@ let lists = [
     year: '2023',
     list: [
       {
-        period: '2023.06.05 ~ 2023.8.30',
+        period: '2023.12.11 ~ 2024.6.11',
+        project: '진행중 프로젝트',
+        kind: '웹 앱',
+        rate: '100',
+      },
+      {
+        period: '2023.06.05 ~ 2023.08.30',
         project: '현대차 수소 상용 글로벌 홍보 웹 개선 프로젝트',
         kind: '반응형 웹',
         rate: '50',
@@ -32,7 +32,12 @@ let lists = [
         kind: '반응형 웹',
         rate: '60',
       },
-
+      {
+        period: '2023.03.02 ~ 2024.02.29',
+        project: 'KT MVNO 고객 대통합 채널 운영',
+        kind: '반응형 웹, 웹 앱, 웹접근성, SEO',
+        rate: '100',
+      },
       {
         period: '2023.02.13 ~ 2023.09.30',
         project: 'LG Shop time TV, 모바일 고도화 프로젝트',
@@ -45,6 +50,18 @@ let lists = [
     year: '2022',
     list: [
       {
+        period: '2022.11.28 ~	2023.02.28',
+        project: '현대오토에버 디자인 시스템 구축 프로젝트',
+        kind: 'PC/모바일 웹 디자인 시스템',
+        rate: '20',
+      },
+      {
+        period: '2022.02.10 ~ 2023.02.28',
+        project: 'KT MVNO 고객 대통합 채널 구축',
+        kind: '반응형 웹, 웹 앱, 웹접근성, SEO',
+        rate: '70',
+      },
+      {
         period: '2022.01.17 ~ 2022.02.28',
         project: 'ThinQ Taste 서비스 프로젝트',
         kind: '웹 앱',
@@ -56,34 +73,22 @@ let lists = [
         kind: 'PC',
         rate: '40',
       },
-      {
-        period: '2022.07.02 ~ 2022.08.11',
-        project: 'LGU+ 그래픽모티프 디지털 어플리케이션 개발',
-        kind: '반응형 웹',
-        rate: '100',
-      },
-      {
-        period: '2022.02.10 ~ 2022.12.30',
-        project: 'KT MVNO 고객 대통합 채널 구축',
-        kind: '반응형 웹, 웹 앱, 웹접근성, SEO',
-        rate: '70',
-      },
-      {
-        period: '2022.11.28 ~	2023.02.28',
-        project: '현대오토에버 디자인 시스템 구축 프로젝트',
-        kind: 'PC/모바일 웹 디자인 시스템',
-        rate: '20',
-      },
     ],
   }, //2022
   {
     year: '2021',
     list: [
       {
-        period: '2021.03.02 ~ 2021.04.30',
-        project: 'LG 채널 모바일 앱',
-        kind: 'Admin',
-        rate: '50',
+        period: '2021.09.14 ~ 2022.12.10',
+        project: 'Btv - VCS 5.3.0 고도화',
+        kind: 'TV OTT 서비스',
+        rate: '20',
+      },
+      {
+        period: '2021.05.10 ~ 2021.12.23',
+        project: 'LG WebOs Sinage 웹 접근성 리뉴얼',
+        kind: 'PC, 웹접근성',
+        rate: '100',
       },
       {
         period: '2021.03.31 ~ 2021.04.31',
@@ -93,33 +98,21 @@ let lists = [
       },
       {
         period: '2021.03.17 ~ 2021.06.30',
-        project: 'LG 그래픽모티브 디지털 구축',
+        project: 'LGU+ 그래픽모티프 디지털 어플리케이션 개발',
         kind: '반응형 웹',
         rate: '100',
       },
       {
-        period: '2021.05.10 ~ 2021.12.23',
-        project: 'LG WebOs Sinage 웹 접근성 리뉴얼',
-        kind: 'PC, 웹접근성',
-        rate: '100',
-      },
-      {
-        period: '2021.09.14 ~ 2022.12.10',
-        project: 'Btv - VCS 5.3.0 고도화',
-        kind: 'TV OTT 서비스',
-        rate: '20',
+        period: '2021.03.02 ~ 2021.04.30',
+        project: 'LG 채널 모바일 앱',
+        kind: 'Admin',
+        rate: '50',
       },
     ],
   }, //2021
   {
     year: '2020',
     list: [
-      {
-        period: '2020.10.12 ~ 2021.07.14',
-        project: 'Mobile B tv 이벤트 연간 운영',
-        kind: '모바일 웹앱',
-        rate: '100',
-      },
       {
         period: '2020.11.26 ~ 2021.01.15',
         project: 'JD 플랫폼 구축',
@@ -130,6 +123,12 @@ let lists = [
         period: '2020.10.19 ~ 2020.11.16',
         project: 'LG SIGNATURE 키친 스위트 청담 쇼룸 개편',
         kind: '반응형 웹',
+        rate: '100',
+      },
+      {
+        period: '2020.10.12 ~ 2021.07.14',
+        project: 'Mobile B tv 이벤트 연간 운영',
+        kind: '모바일 웹앱',
         rate: '100',
       },
       {
@@ -185,7 +184,7 @@ let lists = [
         rate: '97',
       },
       {
-        period: '2018.08 ~ 2018.11',
+        period: '2018.09 ~ 2018.11',
         project: '삼성SDS edutto 개선',
         kind: '반응형 웹',
         rate: '100',
@@ -203,7 +202,7 @@ let lists = [
         rate: '100',
       },
       {
-        period: '2018.01 ~ 2018.05',
+        period: '2018.01 ~ 2018.04',
         project: 'KAIT자격검정',
         kind: '반응형 웹',
         rate: '100',
