@@ -74,20 +74,6 @@
     padding-top: 0;
   }
 
-  /* 포트폴리오 */
-  .portfolio_wrap {
-    .portfolio {
-      margin: 0;
-    }
-    .list_item {
-      width: calc(100% - 4rem);
-      margin: 7rem auto 0;
-      &:first-child {
-        margin-top: 3rem;
-      }
-    }
-  }
-
   /* 경력 */
   #career {
     max-width: 100%;
@@ -99,11 +85,15 @@
     }
   }
   .career_list {
+    .li_title,
+    .li_text,
+    .li_content {
+      padding-left: 1.5rem;
+    }
     .li_title {
       position: relative;
       flex-shrink: 0;
       width: 11rem;
-      padding-left: 1.5rem;
       &:before {
         content: '';
         position: absolute;
@@ -117,7 +107,6 @@
       }
     }
     .li_text {
-      padding-left: 1.5rem;
       span {
         &:before {
           content: '/';
@@ -152,22 +141,32 @@
   .my_ability_area {
     max-width: 35rem;
   }
+
+  /* 포트폴리오 */
+  .portfolio_wrap {
+    .portfolio {
+      margin: 0;
+    }
+    .list_item {
+      width: calc(100% - 4rem);
+      margin: 7rem auto 0;
+      &:first-child {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  /* 경력 */
   .career_list {
-    & > li {
+    .flex {
       display: block;
     }
     .li_title {
-      display: block;
-      width: 100%;
       margin-bottom: 0.5rem;
     }
     .li_text {
-      display: block;
       span {
         margin-right: 1rem;
-        &:first-of-type {
-          display: block;
-        }
         &::before {
           display: none;
         }

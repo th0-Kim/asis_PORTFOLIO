@@ -12,8 +12,10 @@
 .career_list {
   border-top: 1px solid var(--color_dddddd);
   & > li {
-    @include flex(row, flex-start, center);
     padding: 2rem 0;
+  }
+  .flex {
+    @include flex(row, flex-start, center);
   }
   .li_title {
     @include font(1.6rem, 500, var(--color_333333), 1.4);
@@ -31,6 +33,10 @@
         vertical-align: middle;
       }
     }
+  }
+  .li_content {
+    margin-top: 0.5rem;
+    @include font(1.4rem, 500, var(--color_555555), 1.4);
   }
   .rate {
     @include font(1.6rem, 500, var(--color_black), 1.4);
