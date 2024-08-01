@@ -3,7 +3,7 @@ let lists = [
     year: '2024',
     list: [
       {
-        period: '2024.04.01 ~ 2024.06.30',
+        period: '2024.04.01 ~ 2024.08.31',
         project: '진행중',
         kind: '반응형 웹',
         rate: '100',
@@ -17,10 +17,10 @@ let lists = [
     list: [
       {
         period: '2023.12.11 ~ 2024.6.11',
-        project: '진행중',
+        project: '북미향 ESS Installer용 Web App 개발',
         kind: '웹 앱',
         rate: '100',
-        content: '',
+        content: 'LG EnerVu Plus는 ESS와 연동되어 실시간 에너지 상태를 관리 및 모니터링 하는 웹앱',
       },
       {
         period: '2023.06.05 ~ 2023.08.30',
@@ -48,7 +48,7 @@ let lists = [
         project: 'LG Shop time TV, 모바일 고도화 프로젝트',
         kind: 'TV, 모바일 웹',
         rate: '70',
-        content: '',
+        content: 'Shop Time은 LG Smart TV 앱과 모바일 앱으로 사용 할 수 있는 “실시간 홈쇼핑” 서비스로 파트너스, 주문 시스템, 마이 페이지 등 신규 메뉴 추가 및 고도화',
       },
     ],
   }, //2023
